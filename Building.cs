@@ -27,7 +27,7 @@ namespace Planner
 
         public string Address { get; set; }
 
-        public void Construct(Building building)
+        public void Construct()
         {
             _dateConstructed = DateTime.Now;
         }
@@ -35,6 +35,17 @@ namespace Planner
         public void Purchase(string name)
         {
             _owner = name;
+        }
+
+        public string GetBuilding()
+        {
+            return $@"
+{_address}
+---------------
+Designed by {_designer}
+Constructed on {_dateConstructed}
+Owned by {_owner}
+{Volume} cubic meters of space";
         }
 
     }
