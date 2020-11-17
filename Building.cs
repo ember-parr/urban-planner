@@ -40,15 +40,27 @@ namespace Planner
         public string GetBuilding()
         {
             return $@"
-{_address}
----------------
-Designed by {_designer}
-Constructed on {_dateConstructed}
-Owned by {_owner}
-{Volume} cubic meters of space";
+        {_address}
+        ---------------
+        Designed by {_designer}
+        Constructed on {_dateConstructed}
+        Owned by {_owner}
+        {Volume} cubic meters of space";
         }
 
+
+
+
     }
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Planner
 {
@@ -7,8 +8,8 @@ namespace Planner
         static void Main(string[] args)
         {
             Building FiveOneTwoEight = new Building("512 8th Avenue");
-            FiveOneTwoEight.Width = 14;
-            FiveOneTwoEight.Depth = 20;
+            FiveOneTwoEight.Width = 51;
+            FiveOneTwoEight.Depth = 28;
             FiveOneTwoEight.Stories = 4;
             FiveOneTwoEight.Construct();
             FiveOneTwoEight.Purchase("Steve Brownlee");
@@ -33,8 +34,15 @@ namespace Planner
 
 
             Console.WriteLine($"{FiveOneTwoEight.GetBuilding()}");
-            Console.Write($"{OneTwoThree.GetBuilding()}");
-            Console.Write($"{FourFiveSix.GetBuilding()}");
+            Console.WriteLine($"{OneTwoThree.GetBuilding()}");
+            Console.WriteLine($"{FourFiveSix.GetBuilding()}");
+
+
+            List<Building> buildings = new List<Building>();
+            buildings.Add(FiveOneTwoEight);
+            buildings.Add(OneTwoThree);
+            buildings.Add(FourFiveSix);
+
 
 
         }
