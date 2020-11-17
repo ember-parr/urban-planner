@@ -33,9 +33,9 @@ namespace Planner
 
 
 
-            Console.WriteLine($"{FiveOneTwoEight.GetBuilding()}");
-            Console.WriteLine($"{OneTwoThree.GetBuilding()}");
-            Console.WriteLine($"{FourFiveSix.GetBuilding()}");
+            // Console.WriteLine($"{FiveOneTwoEight.GetBuilding()}");
+            // Console.WriteLine($"{OneTwoThree.GetBuilding()}");
+            // Console.WriteLine($"{FourFiveSix.GetBuilding()}");
 
 
             List<Building> buildings = new List<Building>();
@@ -43,8 +43,12 @@ namespace Planner
             buildings.Add(OneTwoThree);
             buildings.Add(FourFiveSix);
 
+            City emberopolis = new City("Emberopolis", "Emberoni", 28, buildings);
 
-
+            foreach (Building building in emberopolis.Buildings)
+            {
+                Console.WriteLine($@"{building.GetBuilding()}");
+            }
         }
     }
 }
