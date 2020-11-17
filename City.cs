@@ -5,16 +5,16 @@ namespace Planner
 {
     public class City
     {
-        public string CityName { get; set; }
-        public string CityMayor { get; set; }
-        public int YearEstablished { get; set; }
+        private string _CityName { get; set; }
+        private string _CityMayor { get; set; }
+        private int _YearEstablished { get; set; }
         public List<Building> Buildings;
 
         public City(string cityName, string mayorName, int yearEst, List<Building> buildings)
         {
-            CityName = cityName;
-            CityMayor = mayorName;
-            YearEstablished = yearEst;
+            _CityName = cityName;
+            _CityMayor = mayorName;
+            _YearEstablished = yearEst;
             Buildings = buildings;
         }
     }
