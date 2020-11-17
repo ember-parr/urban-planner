@@ -19,7 +19,15 @@ namespace Planner
                 return Width * Depth * (3 * Stories);
             }
         }
+        public Building(string address)
+        {
+            Address = address;
+        }
+
+        public string Address { get; set; }
     }
+
+
 
 
 }
